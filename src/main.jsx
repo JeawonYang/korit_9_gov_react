@@ -3,19 +3,21 @@ import App01 from './ch01/App01';
 import App02 from './ch02/App02';
 import Counter from './ch02/Counter';
 import App02_2 from './ch02/App02_2';
+import App02_3 from './ch02/App02_3';
 
 
 const appObj = {
     "ch01" :  <App01 />,
     "ch02" :  <App02 />,
     "ch02_2" :  <App02_2 />,
+    "ch02_3" :  <App02_3 />,
     "counter" :  <Counter />,
     // "ch01_1" : <h1>ch01_1 렌더링</h1>,
     // "ch01_2" : BoxComponent(),
     // "ch01_3" : <BoxComponent />,
     // "ch01_4" : <BoxComponent></BoxComponent>,
 } 
-const currentApp = "ch02_2";
+const currentApp = "ch02_3";
 
 const root = document.getElementById('root');
 createRoot(root).render(appObj[currentApp]);
