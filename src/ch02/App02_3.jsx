@@ -12,13 +12,15 @@ function TodoInput({ todos, setTodos }) {
     const handleOnChange = (e) => {
         setValue(e.target.value);
     }
-
+    // 등록버튼 누르면 이 함수 동작
     const handleOnClick = () => {
+        // todo 객체 생성
         const todo = {
             content: value,
-            writeDate: new Date(),
+            writeDate: new Date().toLocalString(),
         }
-        setTodos([...todos, todo]);
+        setTodos([...todos, todo]);  // todo 배열에 추가
+        setValue(""); // 입력창 초기화
     }
 
     return <div>
