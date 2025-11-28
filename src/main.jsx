@@ -11,6 +11,7 @@ import SearchName from './ch02/SearchName';
 import UseEffect01 from './ch03/UseEffect01';
 import UseEffect02 from './ch03/UseEffect02';
 import UseEffect03 from './ch03/UseEffect03';
+import Calculator from './ch01/Calculator';
 
 
 const appObj = {
@@ -26,12 +27,13 @@ const appObj = {
     "useEffect01" : <UseEffect01 />,
     "useEffect02" : <UseEffect02 />,
     "useEffect03" : <UseEffect03 />,
+    "calculator" : <Calculator />,
     // "ch01_1" : <h1>ch01_1 렌더링</h1>,
     // "ch01_2" : BoxComponent(),
     // "ch01_3" : <BoxComponent />,
     // "ch01_4" : <BoxComponent></BoxComponent>,
 } 
-const currentApp = "useEffect03";
+const currentApp = "calculator";
 
 const root = document.getElementById('root');
 createRoot(root).render(appObj[currentApp]);
