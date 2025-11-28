@@ -6,6 +6,11 @@ import App02_2 from './ch02/App02_2';
 import App02_3 from './ch02/App02_3';
 import App02_4 from './ch02/App02_4';
 import App02_5 from './ch02/App02_5';
+import Inputs from './ch02/Inputs';
+import SearchName from './ch02/SearchName';
+import UseEffect01 from './ch03/UseEffect01';
+import UseEffect02 from './ch03/UseEffect02';
+import UseEffect03 from './ch03/UseEffect03';
 
 
 const appObj = {
@@ -15,13 +20,18 @@ const appObj = {
     "ch02_3" :  <App02_3 />,
     "ch02_4" :  <App02_4 />,
     "ch02_5" :  <App02_5 />,
+    "inputs" : <Inputs />,
+    "searchname" : <SearchName />,
     "counter" :  <Counter />,
+    "useEffect01" : <UseEffect01 />,
+    "useEffect02" : <UseEffect02 />,
+    "useEffect03" : <UseEffect03 />,
     // "ch01_1" : <h1>ch01_1 렌더링</h1>,
     // "ch01_2" : BoxComponent(),
     // "ch01_3" : <BoxComponent />,
     // "ch01_4" : <BoxComponent></BoxComponent>,
 } 
-const currentApp = "ch02_5";
+const currentApp = "useEffect03";
 
 const root = document.getElementById('root');
 createRoot(root).render(appObj[currentApp]);
