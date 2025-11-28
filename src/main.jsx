@@ -4,6 +4,8 @@ import App02 from './ch02/App02';
 import Counter from './ch02/Counter';
 import App02_2 from './ch02/App02_2';
 import App02_3 from './ch02/App02_3';
+import App02_4 from './ch02/App02_4';
+import App02_5 from './ch02/App02_5';
 
 
 const appObj = {
@@ -11,13 +13,15 @@ const appObj = {
     "ch02" :  <App02 />,
     "ch02_2" :  <App02_2 />,
     "ch02_3" :  <App02_3 />,
+    "ch02_4" :  <App02_4 />,
+    "ch02_5" :  <App02_5 />,
     "counter" :  <Counter />,
     // "ch01_1" : <h1>ch01_1 렌더링</h1>,
     // "ch01_2" : BoxComponent(),
     // "ch01_3" : <BoxComponent />,
     // "ch01_4" : <BoxComponent></BoxComponent>,
 } 
-const currentApp = "ch02_3";
+const currentApp = "ch02_5";
 
 const root = document.getElementById('root');
 createRoot(root).render(appObj[currentApp]);
