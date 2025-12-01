@@ -7,9 +7,15 @@ function UseEffect03() {
     const [num2, setNum2] = useState(0);
     const [result, setResult] = useState(0);
 
-    useEffect(() => {
-        console.log("마운트");
-    });
+    // 처음에 useEffect 가 실행되지 않길 원할때
+    const [ refresh, setRefresh ] = useState(false);
+
+    // useEffect(() => {
+    //     if (refresh) {
+    //         console.log("마운트");
+    //         setRefresh(false);
+    //     }
+    // },);
 
     useEffect(() => {
         console("num 변화")
@@ -22,6 +28,7 @@ function UseEffect03() {
 
     const handleNum2OnClick = () => {
         setNum2(num2 + 1);
+        
     }
 
     console.log("JSX 리턴 직전");

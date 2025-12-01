@@ -7,24 +7,19 @@ function UseEffect02() {
         const setter = (value) => {
             v = value;
         }
-        return [ v, setter];
+        return [v, setter];
     }
 
     const Component = () => {
-        const [ num, setNum] = useState(0);
+        const [num, setNum] = useState(0);
         console.log(num);
 
         const onClick = () => {
             setNum(num + 1);
-            console(num);0
+            console(num); 0
         }
-        return <>
-        <div><h1>num = {num}</h1></div>
-        <button onClick={onClick}></button>
-        </>
-
+        return <div>{num}</div>
     }
-
     Component();
 }
 
