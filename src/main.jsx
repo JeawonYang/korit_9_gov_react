@@ -16,6 +16,10 @@ import Axios01 from './ch04/Axios01';
 import Axios02 from './ch04/Axios02';
 import Promise01 from './ch04/Promise01';
 import Calculator from './ch01/Calculator';
+import Axios03 from './ch04/Axios03';
+import Axios04 from './ch04/Axios04';
+import Axios05 from './ch04/Axios05';
+import Axios06 from './ch04/Axios06';
 
 
 const appObj = {
@@ -34,6 +38,10 @@ const appObj = {
     "useEffect04" : <UseEffect04 />,
     "axios01" : <Axios01 />,
     "axios02" : <Axios02 />,
+    "axios03" : <Axios03 />,
+    "axios04" : <Axios04 />,
+    "axios05" : <Axios05 />,
+    "axios06" : <Axios06 />,
     "promise01" : <Promise01 />,
     "calculator" : <Calculator />,
     // "ch01_1" : <h1>ch01_1 렌더링</h1>,
@@ -41,7 +49,7 @@ const appObj = {
     // "ch01_3" : <BoxComponent />,
     // "ch01_4" : <BoxComponent></BoxComponent>,
 } 
-const currentApp = "axios02";
+const currentApp = "axios06";
 
 const root = document.getElementById('root');
 createRoot(root).render(appObj[currentApp]);
