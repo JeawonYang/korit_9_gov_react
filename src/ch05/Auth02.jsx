@@ -64,10 +64,30 @@ function Auth02() {
         try {
             const response = await axios.post("http://localhost:8080/api/auth/signin", inputValue);
             const {accessToken} = response.data;
-            localStorage.setItem("accessToken", accessToken);
+            localStorage.setItem("AccessToken", accessToken);
             alert("로그인 성공!!");
+            await getPrincipalRequest();
         } catch (error) {
             alert(error.response.data.message);
+        }
+    }
+
+    const handleInputOnKeyDown = (e) => {
+        if (e.key === "Enter") {
+            signinRequest();
+        }
+    };
+
+    const getPrincipalRequest = async () => {
+        try {
+            const resp = await axios.get("http://localhost:8080/api/auth/principal", {
+                headers : {
+                    "Authorization" : `Bearer ${localStorage.getItem("AccessToken")}`,
+                },
+            });
+            console.log(resp);
+        } catch (error) {
+            console.log(error);
         }
     }
 
@@ -84,7 +104,8 @@ function Auth02() {
         <input type="text" 
                 name="password" 
                 placeholder="PASSWORD" 
-                value={inputValue.password} 
+                value={inputValue.password}
+                onKeyDown={handleInputOnKeyDown}
                 onChange={handleInputOnchange}/>
         <span>{inputMessage.password}</span>
     </div>

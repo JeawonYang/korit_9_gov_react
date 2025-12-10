@@ -68,30 +68,54 @@ function Auth01() {
         try {
             const response = await axios.post("http://localhost:8080/api/auth/signup", inputvalue);
             console.log(response);
+            alert("회원가입 완료.");
         } catch (error) {
             console.log(error);
         }
     }
 
+
+    const handleInputOnKeyDown = (e) => {
+        if (e.key === "Enter") {
+            getUsersApi();
+        }
+    };
+
     return <>
     <div>
         <div> 
-            <input type="text" name="username" placeholder="USERNAME" value={inputvalue.username} onChange={handleInputOnChange}/>
+            <input type="text"
+                name="username" 
+                placeholder="USERNAME" 
+                value={inputvalue.username}
+                onChange={handleInputOnChange}/>
             <span>{inputMessage.username}</span>
         </div>
         <div>
-            <input type="text" name="password" placeholder="PASSWORD" value={inputvalue.password} onChange={handleInputOnChange}/>
+            <input type="text" 
+                name="password" 
+                placeholder="PASSWORD" 
+                value={inputvalue.password} 
+                onChange={handleInputOnChange}/>
             <span>{inputMessage.password}</span>
         </div>
         <div>
-            <input type="text" name="name" placeholder="NAME" value={inputvalue.name} onChange={handleInputOnChange}/>
+            <input type="text" 
+                name="name" 
+                placeholder="NAME" 
+                value={inputvalue.name}
+                onChange={handleInputOnChange}/>
             <span>{inputMessage.name}</span>
         </div>
         <div>
-            <input type="text" name="email" placeholder="EMAIL" value={inputvalue.email} onChange={handleInputOnChange}/>
+            <input type="text" 
+                name="email" 
+                placeholder="EMAIL" 
+                value={inputvalue.email}
+                onChange={handleInputOnChange}/>
             <span>{inputMessage.email}</span>
         </div>
-        <button onClick={handleSignupOnClick}>가입하기</button>
+        <button onClick={handleSignupOnClick} onKeyDown={handleInputOnKeyDown}>가입하기</button>
     </div>
     </>
 }
