@@ -21,6 +21,7 @@ import Axios04 from './ch04/Axios04';
 import Axios05 from './ch04/Axios05';
 import Axios06 from './ch04/Axios06';
 import Auth01 from './ch05/Auth01';
+import Auth02 from './ch05/Auth02';
 
 
 const appObj = {
@@ -45,13 +46,14 @@ const appObj = {
     "axios06" : <Axios06 />,
     "promise01" : <Promise01 />,
     "calculator" : <Calculator />,
-    "auth01" : <Auth01 />
+    "auth01" : <Auth01 />,
+    "auth02" : <Auth02 />,
     // "ch01_1" : <h1>ch01_1 렌더링</h1>,
     // "ch01_2" : BoxComponent(),
     // "ch01_3" : <BoxComponent />,
     // "ch01_4" : <BoxComponent></BoxComponent>,
 } 
-const currentApp = "auth01";
+const currentApp = "auth02";
 
 const root = document.getElementById('root');
 createRoot(root).render(appObj[currentApp]);

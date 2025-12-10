@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 function Auth01() {
@@ -54,14 +55,21 @@ function Auth01() {
     }
 
     const handleSignupOnClick = () => {
-
+        if (Object.values(inputMessage)
+            .map(message => !!message)
+            .includes(true)) {
+                alert("입력하신 가입정보를 다시 확인하세요.");
+                return;
+        }
+        signupRequest();
     }
 
     const signupRequest = async () => {
         try {
             const response = await axios.post("http://localhost:8080/api/auth/signup", inputvalue);
+            console.log(response);
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
