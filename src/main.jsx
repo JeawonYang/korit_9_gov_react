@@ -30,6 +30,11 @@ import Router05 from './ch06/Router05';
 import Css from './ch07/Css';
 import Css01 from './ch07/Css01';
 import Css02 from './ch07/Css02';
+import Zustand01 from './ch08/Zustand01';
+import Zustand02 from './ch08/Zustand02';
+import Zustand03 from './ch08/Zustand03';
+import ReactQuery01 from './ch09/ReactQuery01';
+import ReactQuery02 from './ch09/ReactQuery02';
 
 
 const appObj = {
@@ -64,12 +69,17 @@ const appObj = {
     "css" : <Css />,
     "css01" : <Css01 />,
     "css02" : <Css02 />,
+    "zustand01" : <Zustand01 />,
+    "zustand02" : <Zustand02 />,
+    "zustand03" : <Zustand03 />,
+    "reactquery01" : <ReactQuery01 />,
+    "reactquery02" : <ReactQuery02 />,
     // "ch01_1" : <h1>ch01_1 렌더링</h1>,
     // "ch01_2" : BoxComponent(),
     // "ch01_3" : <BoxComponent />,
     // "ch01_4" : <BoxComponent></BoxComponent>,
 } 
-const currentApp = "css";
+const currentApp = "reactquery02";
 
 const root = document.getElementById('root');
 createRoot(root).render(appObj[currentApp]);
